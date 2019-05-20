@@ -1,0 +1,22 @@
+<form [formGroup]="authForm" (ngSubmit)="submit(authForm.value)">
+  <label>Имя</label>
+  <br>
+  <input type="text" name="name" formControlName="name">
+  <br>
+  <label>Логин</label>
+  <br>
+  <input type="text" name="username" formControlName="username">
+  <br>
+  <label>Почта</label>
+  <br>
+  <input type="text" name="email" formControlName="email">
+  <br>
+  <label>Пароль</label>
+  <br>
+  <input type = "password" name="password" formControlName="password">
+  <br>
+  <select formControlName="role" name="role" multiple>
+    <option *ngFor="let r of role" [value]="r">{{r}}</option>
+  </select>
+  <button type="submit">Login up</button>
+</form>

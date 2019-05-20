@@ -1,0 +1,11 @@
+<form #myForm="ngForm" (ngSubmit)="submit(myForm.value)">
+<label>Имя</label>
+<br>
+<input type="text" name="username" placeholder = "login" #username=ngModel [(ngModel)]="form1.username">
+<br>
+<label>Пароль</label>
+<br>
+<input type="password" name="password" placeholder = "password" #password=ngModel [(ngModel)]="form1.password">
+  <br>
+  <button type="submit">Войти</button>
+</form>
