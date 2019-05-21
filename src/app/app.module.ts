@@ -7,18 +7,23 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { AuthComponent } from './auth/auth.component';
 import {LoginService} from './auth/loginservice';
+import { PostComponent } from './post/post.component';
+import {RoutermoduleModule} from './routermodule/routermodule.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrComponent,
-    AuthComponent
+    AuthComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RoutermoduleModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
