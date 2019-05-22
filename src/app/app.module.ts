@@ -9,6 +9,7 @@ import { AuthComponent } from './auth/auth.component';
 import {LoginService} from './auth/loginservice';
 import { PostComponent } from './post/post.component';
 import {RoutermoduleModule} from './routermodule/routermodule.module';
+import {PostService} from './post/postservice';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import {RoutermoduleModule} from './routermodule/routermodule.module';
     RoutermoduleModule
 
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

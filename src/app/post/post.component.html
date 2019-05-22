@@ -1,3 +1,24 @@
-<p>
-  post works!
-</p>
+<ul>
+  <li *ngFor="let post of httpService.posts">{{post.title}} {{post.description}} {{post.content}}
+    <button (click)="showForEdit(post)">Show For Edit</button>
+    <button (click)="delete(post.id)">Delete</button>
+  </li>
+</ul>
+<br>
+<form #myForm="ngForm" (ngSubmit)="addPost(myForm) ">
+  <input type="hidden" name="id" [(ngModel)]="httpService.post.id">
+  <label>Title</label>
+  <br>
+<input type="text" name="title" [(ngModel)]="httpService.post.title">
+  <br>
+  <label>Description</label>
+  <br>
+  <input type = "text" name="description" [(ngModel)]="httpService.post.description">
+  <br>
+  <label>content</label>
+  <br>
+  <input type="text" name="content" [(ngModel)]="httpService.post.content">
+  <br>
+  <button type="submit">Add Post</button>
+  <button (click)="resetForm(myForm)">Reset Form</button>
+</form>
