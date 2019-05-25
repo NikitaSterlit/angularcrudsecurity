@@ -1,0 +1,13 @@
+{{http.post?.content}}
+<ul>
+<li *ngFor=" let comment of http.comments">
+  {{comment.text}}
+</li>
+</ul>
+<form #commentForm="ngForm" (ngSubmit)="onSubmit(commentForm)">
+  <input type="hidden" name="id" [(ngModel)]=""/>
+  <br>
+  <input type="text" name="text" [(ngModel)]=""/>
+  <br>
+  <input type="submit" value="Add Comment"/>
+</form>
